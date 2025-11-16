@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>まげ無いか？ござ無いか？</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>まげ無いか？ござ無いか？</h1>
+
+<div id="chip-area">
+    所持チップ：<span id="chips">1,000,000</span>
+</div>
+
+<div id="season-area">
+    季節：<span id="season">-</span>
+</div>
+
+<div id="choose">
+    <button class="choose-btn" id="btn-mage" onclick="bet('mage')">まげに賭ける（10万）</button>
+    <button class="choose-btn" id="btn-goza" onclick="bet('goza')">ござに賭ける（10万）</button>
+    <button class="choose-btn" id="btn-free" onclick="spinFree()">賭けずに回す</button>
+</div>
+
+<div id="dice-area">
+    <div class="dice-box"><div class="dice-face" id="dice1">1</div></div>
+    <div class="dice-box"><div class="dice-face" id="dice2">1</div></div>
+</div>
+
+<div id="result-area">
+    <p id="result-text">結果：</p>
+    <p id="win-lose-text">判定：</p>
+    <button id="reset-btn" onclick="resetGame()">リセット</button>
+</div>
+
+<!-- カットイン -->
+<div id="cutin">入ります！</div>
+
+<!-- 罫線 -->
+<div id="roadmap-wrapper">
+    <div id="roadmap"></div>
+</div>
+
+<div id="legend">
+    <span class="circle mage"></span> まげ　
+    <span class="circle goza"></span> ござ
+</div>
+
+<!-- 効果音：BET音 -->
+<audio id="se-bet"
+src="data:audio/wav;base64,UklGRlQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YRAAAAAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA"
+preload="auto"></audio>
+
+<!-- 効果音：ドン音 -->
+<audio id="se-don"
+src="data:audio/wav;base64,UklGRlQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YRQAAAAA/4AA/8AA//8A/4AA/8AA//8A/4AA/8AA//8A/4AA"
+preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

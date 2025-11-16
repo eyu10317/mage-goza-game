@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+#choose button {
+    margin: 10px;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+
+#choose button:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+#chip-area { font-size: 22px; margin-bottom: 10px; }
+
+.dice-box {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    background: #fff;
+    margin: 10px;
+}
+
+.dice-face {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 80px;
+}
+
+#result-area {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.mage { background: blue; }
+.goza { background: red; }
+
+#legend {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* カットイン */
+#cutin {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+/* 罫線（大路） */
+#roadmap-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: scroll;
+    border: 1px solid #aaa;
+    background: #fff;
+}
+
+#roadmap {
+    display: grid;
+    grid-template-columns: repeat(30, 26px);
+    grid-auto-rows: 26px;
+    padding: 5px;
+}
+
+.road-cell {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.dot {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
