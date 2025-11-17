@@ -67,7 +67,7 @@ function rollDice(choice, isBet){
     document.getElementById("result-text").textContent = "結果：";
     document.getElementById("win-lose-text").textContent = "判定：";
 
-    show0 , 7000 , 700();
+    showCutin , 7000 , 700();
 
     isRolling = true;
     disableButtons(true);
