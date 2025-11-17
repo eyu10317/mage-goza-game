@@ -67,12 +67,14 @@ function rollDice(choice, isBet){
     document.getElementById("result-text").textContent = "結果：";
     document.getElementById("win-lose-text").textContent = "判定：";
 
-    showCutin , 7000 , 700();
+    // 🔧 カットイン（正しく呼び出す）
+    showCutin();
 
     isRolling = true;
     disableButtons(true);
 
     startDiceAnimation();
+
 
     setTimeout(()=>{
 
